@@ -1,6 +1,10 @@
 import React,{useEffect, useState} from 'react';
 import './App.css';
 import CurrencyRow from './CurrencyRow';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Navbar } from 'react-bootstrap';
+
+
 
 const BASE_URL = 'https://api.ratesapi.io/api/latest'
 
@@ -56,6 +60,20 @@ fetch(BASE_URL)
       }
   return (
     <>
+<Navbar  expand="sm" bg="dark" variant="dark" fixed="top" >
+  <div className="pad">
+  <Navbar.Brand href="#home"  >Currency Converter</Navbar.Brand>
+  </div>
+</Navbar>
+
+<Navbar  expand="lg" bg="dark" variant="dark" fixed="bottom" >
+  <div className="Bot">
+<p  >Copyright &copy; Currency Converter.   All Rights Reserved  |  Contact Us: +91 90000 00000 |  Kishenkumar220@gmail.com</p>
+</div>
+</Navbar>
+    
+
+<div className="ConverterBox">
       <h1>Convert</h1>
             <CurrencyRow currencyOptions = {currencyOptions} 
             selectedCurrency = {fromCurrency}
@@ -66,13 +84,15 @@ fetch(BASE_URL)
               
             
             <div className="equals">=</div>
+            
             <CurrencyRow currencyOptions = {currencyOptions}
             selectedCurrency = {toCurrency}
             onChangeCurrency={e => setToCurrency(e.target.value)}
             onChangeAmount={handleToAmountChange}
             amount = {toAmount}
             />
-      </>
+            </div>
+ </>
   );
 }
 export default App;
