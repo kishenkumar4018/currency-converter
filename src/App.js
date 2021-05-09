@@ -66,12 +66,11 @@ fetch(BASE_URL)
   </div>
 </Navbar>
 
-<Navbar  expand="lg" bg="dark" variant="dark" fixed="bottom" >
+<Navbar  expand="sm" bg="dark" variant="dark" fixed="bottom" className="justify-content-sm-center">
   <div className="Bot">
 <p  >Copyright &copy; Currency Converter.   All Rights Reserved  |  Contact Us: +91 90000 00000 |  Kishenkumar220@gmail.com</p>
 </div>
 </Navbar>
-    
 
 <div className="ConverterBox">
       <h1>Convert</h1>
